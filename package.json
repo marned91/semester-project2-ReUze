@@ -1,0 +1,26 @@
+{
+  "name": "semester-project2-reuze",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "My semester project 2 at Noroff Online Frontend developer course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marned91/semester-project2-ReUze.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marned91/semester-project2-ReUze/issues"
+  },
+  "homepage": "https://github.com/marned91/semester-project2-ReUze#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
