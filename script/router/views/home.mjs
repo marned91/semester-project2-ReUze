@@ -1,3 +1,6 @@
 import { authGuard } from "../../utils/authGuard.mjs";
+import { setupMenuToggle } from "../../utils/menuToggle.mjs";
 
-authGuard();
+setupMenuToggle();
+
+console.log("Hello, world!");

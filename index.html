@@ -13,36 +13,66 @@
       src="https://kit.fontawesome.com/4abbc2116c.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="script/main.mjs"></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="script/main.mjs"></script>
   </head>
   <body
     class="min-h-screen grid grid-rows-[auto_1fr_auto] overflow-x-hidden w-screen"
   >
     <header
-      class="bg-white w-full flex items-center justify-between py-4 px-20 border border-solid border-black fixed w-full z-20 top-0 start-0"
+      class="bg-white w-full flex items-center justify-between py-4 px-5 md:px-20 border border-solid border-black fixed top-0 start-0 z-20"
     >
-      <a href="/public/">
-        <img
-          src="/assets/reuze-high-resolution-logo-transparent.png"
-          alt="ReUze Logo"
-          class="w-44 h-auto"
-        />
-      </a>
-      <nav>
-        <ul class="flex gap-10 font-headerFooter">
-          <li>
-            <a href="/">HOME</a>
-          </li>
-          <li>
-            <a>LOG OUT</a>
-          </li>
-          <li>
-            <a href="/profile/" class="bg-highlight px-5 py-2.5 rounded-full"
-              >PROFILE</a
-            >
-          </li>
-        </ul>
+      <nav class="w-full flex items-center justify-between">
+        <!-- Left side: Hamburger menu (only visible on small screens) -->
+        <button
+          id="menu-toggle"
+          class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Center: Logo -->
+        <a
+          href="/public/"
+          class="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0"
+        >
+          <img
+            src="/assets/reuze-high-resolution-logo-transparent.png"
+            alt="ReUze Logo"
+            class="w-36 md:w-44 h-auto"
+          />
+        </a>
+
+        <!-- Right side: Profile link (only visible on small screens) -->
+        <a href="/profile/" class="md:hidden font-headerFooter">PROFILE</a>
+
+        <!-- Navigation menu (hidden by default on mobile) -->
+        <div
+          id="mobile-menu"
+          class="hidden md:flex md:items-center md:gap-10 md:static md:w-full absolute top-16 left-0 w-full bg-white border border-black md:border-none md:bg-transparent"
+        >
+          <ul class="flex font-headerFooter p-5 justify-center gap-10">
+            <li><a href="/" class="block py-2 px-3 md:px-0">HOME</a></li>
+            <li><a href="#" class="block py-2 px-3 md:px-0">LOG OUT</a></li>
+            <li class="hidden md:block">
+              <a href="/profile/" class="block py-2 px-3 md:px-0">PROFILE</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
