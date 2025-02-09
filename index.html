@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,29 +16,54 @@
     <script type="module" src="script/main.mjs"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <header>
-      <div class="bg-black">
-        <a href="/public/">
-          <img
-            src="/assets/reuze-high-resolution-logo-transparent.png"
-            alt="ReUze Logo"
-          />
-        </a>
-        <nav>
-          <ul>
-            <li>
-              <a></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  <body
+    class="min-h-screen grid grid-rows-[auto_1fr_auto] overflow-x-hidden w-screen"
+  >
+    <header
+      class="bg-white w-full flex items-center justify-between py-4 px-20 border border-solid border-black fixed w-full z-20 top-0 start-0"
+    >
+      <a href="/public/">
+        <img
+          src="/assets/reuze-high-resolution-logo-transparent.png"
+          alt="ReUze Logo"
+          class="w-44 h-auto"
+        />
+      </a>
+      <nav>
+        <ul class="flex gap-10 font-headerFooter">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          <li>
+            <a>LOG OUT</a>
+          </li>
+          <li>
+            <a href="/profile/" class="bg-highlight px-5 py-2.5 rounded-full"
+              >PROFILE</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <i class="fa-brands fa-pagelines" style="color: #383939"></i>
       <i class="fa-solid fa-house" style="color: #383939"></i>
       <i class="fa-regular fa-face-smile-beam" style="color: #383939"></i>
     </main>
-    <footer></footer>
+    <footer
+      class="bg-white py-5 px-10 w-full mt-auto border border-solid border-black"
+    >
+      <div class="flex justify-between justify-center">
+        <img
+          src="assets/reuze-high-resolution-logo-transparent.png"
+          alt="ReUze logo"
+          class="w-44 h-auto"
+        />
+        <div class="flex justify-between gap-5 items-center font-headerFooter">
+          <a href="/global/about.html">ABOUT</a>
+          <a href="/global/terms.html">TERMS & CONDITIONS</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
